@@ -1,0 +1,17 @@
+# --- Cœur de l'application ---
+streamlit==1.53.0
+python-dotenv==1.2.1
+
+# --- Intelligence Artificielle (Agent & RAG) ---
+mistralai==1.10.0
+chromadb==1.4.1
+pydantic==2.12.5
+
+# --- Analyse de données et Visualisation ---
+pandas==2.3.3
+numpy==2.4.1
+plotly==6.5.2
+
+# --- Communication et Utilitaires ---
+httpx==0.28.1
+requests==2.32.5
