@@ -13,21 +13,21 @@ L'application utilise l'API **Mistral AI** pour permettre au chatbot et à l'age
    ```
 Note : Si cette clé est absente, l'application basculera automatiquement en mode DEMO (recherche par mots-clés simple).
 
+---
 ##  🚀 Lancement de l'application
-L'interface est propulsée par Streamlit. Pour garantir que tous les modules communiquent correctement, suivez ces étapes :
+Vous pouvez lancer l'application selon deux modes différents en fonction de vos besoins :
 
-### 1. Installation des dépendances
-Installez les bibliothèques critiques répertoriées dans le fichier requirements.txt :
-
-```Bash
-pip install -r requirements.txt
-```
-
-### 2. Démarrage de la Simulation
-Lancez l'interface de simulation temps réel avec la commande suivante :
+### 1. Mode Simulation Temps Réel
+Idéal pour observer le flux dynamique des patients et les mouvements du personnel (infirmières et aides-soignants) minute par minute.
 
 ```Bash
 streamlit run app_simulation.py
+```
+### 2. Mode Dashboard & Chatbot
+Idéal pour analyser les statistiques (graphiques ARIMA), tester des scénarios de crise manuellement ou poser des questions sur les règles via le Chatbot intelligent.
+Bash
+```Bash
+streamlit run app.py
 ```
 
 ---
