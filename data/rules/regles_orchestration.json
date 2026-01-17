@@ -1,0 +1,394 @@
+{
+  "metadata": {
+    "version": "1.0",
+    "date_creation": "2026-01-17",
+    "description": "Règles complètes d'orchestration des urgences - Toutes durées en MINUTES",
+    "unite_temps": "minutes"
+  },
+  
+  "regles_priorite": {
+    "description": "Hiérarchie de priorité avec exception temps d'attente",
+    "niveaux": [
+      {
+        "niveau": 1,
+        "gravite": "ROUGE",
+        "description": "Vital + Urgent - TOUJOURS prioritaire",
+        "couleur": "#FF0000",
+        "emoji": "🔴",
+        "temps_consultation_min": 1,
+        "temps_consultation_max": 5,
+        "destination_prioritaire": "SOINS_CRITIQUES",
+        "destinations_alternatives": ["CARDIOLOGIE", "PNEUMOLOGIE", "NEUROLOGIE", "selon pathologie"]
+      },
+      {
+        "niveau": 2,
+        "gravite": "JAUNE",
+        "description": "Non vital mais urgent",
+        "couleur": "#FFA500",
+        "emoji": "🟡",
+        "temps_consultation_min": 20,
+        "temps_consultation_max": 40,
+        "destinations": ["selon pathologie"]
+      },
+      {
+        "niveau": 3,
+        "gravite": "VERT",
+        "description": "Non vital, non urgent",
+        "couleur": "#00CC66",
+        "emoji": "🟢",
+        "temps_consultation_min": 10,
+        "temps_consultation_max": 25,
+        "destinations": ["selon pathologie"]
+      },
+      {
+        "niveau": 4,
+        "gravite": "GRIS",
+        "description": "Pas d'urgence - retour maison",
+        "couleur": "#808080",
+        "emoji": "⚪",
+        "temps_consultation_min": 5,
+        "temps_consultation_max": 15,
+        "destination_unique": "MAISON"
+      }
+    ],
+    
+    "exception_temps_attente": {
+      "active": true,
+      "description": "Si VERT attend >360min (6h), il passe avant JAUNE mais JAMAIS avant ROUGE",
+      "seuil_minutes": 360,
+      "regles": [
+        "ROUGE reste toujours priorité 1 (absolu)",
+        "VERT >360min devient priorité 2",
+        "JAUNE devient priorité 3",
+        "VERT <360min reste priorité 4",
+        "GRIS reste priorité 5"
+      ]
+    }
+  },
+  
+  "algorithme_queue": {
+    "description": "Algorithme de sélection du prochain patient",
+    "ordre_normal": [
+      "Tous les ROUGE (par ordre arrivée)",
+      "Tous les JAUNE (par ordre arrivée)",
+      "Tous les VERT (par ordre arrivée)",
+      "Tous les GRIS (par ordre arrivée)"
+    ],
+    "ordre_avec_exception_360min": [
+      "Tous les ROUGE (par ordre arrivée)",
+      "VERT qui attendent >360min (par ordre arrivée)",
+      "JAUNE (par ordre arrivée)",
+      "VERT <360min (par ordre arrivée)",
+      "GRIS (par ordre arrivée)"
+    ],
+    "criteres_tri": [
+      "priorite_effective (avec exception si applicable)",
+      "heure_arrivee (FIFO dans même priorité)"
+    ]
+  },
+  
+  "personnel": {
+    "docteur": {
+      "nombre": 1,
+      "localisation": "CONSULTATION",
+      "type": "FIXE",
+      "capacite": 1,
+      "role": "consultation_medicale",
+      "description": "Médecin des urgences - 1 patient à la fois"
+    },
+    
+    "infirmieres": [
+      {
+        "id": "INF_A",
+        "nom": "Infirmière A - Réceptionniste",
+        "type": "FIXE",
+        "localisation": "TRIAGE",
+        "roles": [
+          "accueillir_patients",
+          "evaluer_gravite",
+          "assigner_salle_attente"
+        ],
+        "contraintes": [
+          "NE_BOUGE_JAMAIS"
+        ],
+        "description": "Toujours au triage, ne se déplace JAMAIS"
+      },
+      {
+        "id": "INF_B",
+        "nom": "Infirmière B - Mobile",
+        "type": "MOBILE",
+        "localisation": "CIRCULATION",
+        "roles": [
+          "surveiller_salles_attente",
+          "transporter_patients_vers_consultation"
+        ],
+        "temps_transport_consultation_min": 5,
+        "contraintes": [
+          "MAX_15MIN_SANS_SURVEILLANCE"
+        ],
+        "description": "Circule entre salles et consultation"
+      },
+      {
+        "id": "INF_C",
+        "nom": "Infirmière C - Mobile",
+        "type": "MOBILE",
+        "localisation": "CIRCULATION",
+        "roles": [
+          "surveiller_salles_attente",
+          "transporter_patients_vers_consultation"
+        ],
+        "temps_transport_consultation_min": 5,
+        "contraintes": [
+          "MAX_15MIN_SANS_SURVEILLANCE"
+        ],
+        "description": "Circule entre salles et consultation"
+      }
+    ],
+    
+    "aides_soignants": [
+      {
+        "id": "AS_1",
+        "nom": "Aide-Soignant 1",
+        "type": "MOBILE",
+        "localisation": "CIRCULATION",
+        "roles": [
+          "surveiller_salles_attente (si infirmière pas disponible)",
+          "transporter_patients_consultation",
+          "transporter_patients_unite"
+        ],
+        "temps_transport_consultation_min": 5,
+        "temps_transport_unite_min": 45,
+        "contraintes": [
+          "MAX_15MIN_SANS_SURVEILLANCE (si aucune infirmière disponible)",
+          "MAX_60MIN_ABSENCE_TOTALE"
+        ],
+        "description": "Peut surveiller salles et transporter vers unités"
+      },
+      {
+        "id": "AS_2",
+        "nom": "Aide-Soignant 2",
+        "type": "MOBILE",
+        "localisation": "CIRCULATION",
+        "roles": [
+          "surveiller_salles_attente (si infirmière pas disponible)",
+          "transporter_patients_consultation",
+          "transporter_patients_unite"
+        ],
+        "temps_transport_consultation_min": 5,
+        "temps_transport_unite_min": 45,
+        "contraintes": [
+          "MAX_15MIN_SANS_SURVEILLANCE (si aucune infirmière disponible)",
+          "MAX_60MIN_ABSENCE_TOTALE"
+        ],
+        "description": "Peut surveiller salles et transporter vers unités"
+      }
+    ]
+  },
+  
+  "infrastructure": {
+    "salles_attente": [
+      {
+        "numero": 1,
+        "capacite": 5,
+        "type": "ATTENTE",
+        "contrainte_surveillance_max_min": 15,
+        "description": "Salle d'attente 1 - 5 places"
+      },
+      {
+        "numero": 2,
+        "capacite": 10,
+        "type": "ATTENTE",
+        "contrainte_surveillance_max_min": 15,
+        "description": "Salle d'attente 2 - 10 places"
+      },
+      {
+        "numero": 3,
+        "capacite": 5,
+        "type": "ATTENTE",
+        "contrainte_surveillance_max_min": 15,
+        "description": "Salle d'attente 3 - 5 places"
+      }
+    ],
+    "consultation": {
+      "numero": 1,
+      "capacite": 1,
+      "type": "CONSULTATION",
+      "description": "Salle de consultation unique - 1 patient à la fois"
+    },
+    "capacite_totale_attente": 20
+  },
+  
+  "unites_transfert": {
+    "description": "Unités hospitalières de destination après consultation",
+    "regles_generales": [
+      "Patient DOIT avoir vu médecin avant transfert",
+      "Unité DOIT valider disponibilité",
+      "GRIS → MAISON automatique",
+      "ROUGE → SOINS_CRITIQUES immédiat OU unité spécialisée selon pathologie"
+    ],
+    "unites": [
+      {
+        "nom": "CARDIOLOGIE",
+        "capacite_initiale": 10,
+        "specialites": ["cardiaque", "thoracique", "cardiovasculaire", "infarctus"],
+        "temps_transport_min": 45,
+        "priorite": "normale"
+      },
+      {
+        "nom": "PNEUMOLOGIE",
+        "capacite_initiale": 8,
+        "specialites": ["respiratoire", "pulmonaire", "pneumonie", "asthme"],
+        "temps_transport_min": 45,
+        "priorite": "normale"
+      },
+      {
+        "nom": "NEUROLOGIE",
+        "capacite_initiale": 6,
+        "specialites": ["neurologique", "AVC", "epilepsie", "paralysie", "cerebral"],
+        "temps_transport_min": 45,
+        "priorite": "normale"
+      },
+      {
+        "nom": "ORTHOPÉDIE",
+        "capacite_initiale": 12,
+        "specialites": ["fracture", "entorse", "traumatisme", "os", "articulation"],
+        "temps_transport_min": 45,
+        "priorite": "normale"
+      },
+      {
+        "nom": "SOINS_CRITIQUES",
+        "capacite_initiale": 5,
+        "specialites": ["critique", "urgence_vitale", "reanimation", "detresse"],
+        "temps_transport_min": 45,
+        "priorite": "immediate",
+        "description": "Unité de réanimation pour cas critiques ROUGE"
+      },
+      {
+        "nom": "MAISON",
+        "capacite_initiale": 999999,
+        "specialites": ["benin", "non_urgent", "administratif"],
+        "temps_transport_min": 0,
+        "priorite": "normale",
+        "description": "Retour à domicile pour patients GRIS"
+      }
+    ]
+  },
+  
+  "contraintes_principales": {
+    "avant_transfert": [
+      "Patient DOIT avoir vu un médecin avant transfert vers unité",
+      "Aide-soignant DOIT être disponible pour transport (45min)"
+    ],
+    "surveillance_salles": [
+      "Salle ne peut rester >15min sans surveillance",
+      "Infirmière mobile peut surveiller 1 salle à la fois",
+      "Aide-soignant peut surveiller si aucune infirmière disponible",
+      "Surveillance assurée par rotation personnel mobile"
+    ],
+    "transport": [
+      "Transport vers consultation: 5min (infirmière OU aide-soignant)",
+      "Transport vers unité: 45min (aide-soignant UNIQUEMENT)",
+      "Personnel en transport n'est pas disponible pour surveillance",
+      "Planifier transports pour respecter contrainte 15min surveillance"
+    ],
+    "temps_personnel": [
+      "Infirmière mobile: ne peut laisser salle >15min sans surveillance",
+      "Aide-soignant: ne peut s'absenter >60min total des salles d'attente",
+      "Temps transport compte dans temps d'absence"
+    ]
+  },
+  
+  "regles_speciales": {
+    "gris": {
+      "description": "Patient GRIS retourne systématiquement à la maison",
+      "consultation": "Consultation rapide 5-15min",
+      "transfert": "MAISON (automatique)",
+      "pas_d_unite": true
+    },
+    "rouge": {
+      "description": "Patient ROUGE nécessite transfert immédiat après consultation rapide",
+      "consultation": "Consultation ultra-rapide 1-5min",
+      "transfert_prioritaire": "SOINS_CRITIQUES",
+      "transfert_alternatif": "Unité spécialisée selon pathologie si soins critiques pleins",
+      "priorite_absolue": true
+    },
+    "exception_360min": {
+      "description": "Patient VERT avec attente >360min (6h)",
+      "action": "Passe avant JAUNE dans la file d'attente",
+      "limite": "Passe JAMAIS avant ROUGE",
+      "calcul": "Temps depuis arrivée dans salle d'attente"
+    }
+  },
+  
+  "metriques_pour_arima": {
+    "description": "Métriques à logger pour modèle ARIMA de prédiction saturation",
+    "metriques_temps_reel": {
+      "taux_saturation_global": {
+        "formule": "(patients_actuels / capacite_totale) * 100",
+        "frequence_calcul_min": 1,
+        "unite": "pourcentage"
+      },
+      "taux_saturation_par_salle": {
+        "formule": "(patients_salle / capacite_salle) * 100",
+        "frequence_calcul_min": 1,
+        "unite": "pourcentage"
+      },
+      "flux_arrivee_patients": {
+        "description": "Nombre patients accueillis par heure",
+        "frequence_calcul_min": 60,
+        "unite": "patients/heure"
+      },
+      "flux_sortie_patients": {
+        "description": "Nombre patients transférés par heure",
+        "frequence_calcul_min": 60,
+        "unite": "patients/heure"
+      },
+      "temps_attente_moyen_mobile": {
+        "description": "Moyenne mobile temps d'attente sur dernière heure",
+        "fenetre_min": 60,
+        "unite": "minutes"
+      }
+    },
+    "metriques_historiques": {
+      "pic_charge": "Heure de pic de saturation",
+      "duree_saturation": "Temps passé en saturation >80%",
+      "violations_contraintes": "Nombre violations surveillance/absence",
+      "temps_consultation_moyen_par_gravite": "Durée moyenne par niveau"
+    },
+    "objectif_arima": "Prédire taux de saturation à t+30min, t+60min, t+120min"
+  },
+  
+  "format_logs": {
+    "description": "Structure des logs JSON pour historique et analyse",
+    "structure_log_event": {
+      "timestamp": "ISO 8601 format",
+      "timestamp_unix": "Unix timestamp pour calculs",
+      "event_type": "Type événement (PATIENT_ACCUEILLI, CONSULTATION_DEMARREE, etc.)",
+      "data": {
+        "patient_id": "Identifiant unique patient",
+        "gravite": "Niveau de gravité",
+        "salle": "Numéro de salle si applicable",
+        "duree": "Durée si applicable",
+        "unite_destination": "Unité de transfert si applicable",
+        "metadata": "Données additionnelles spécifiques à l'événement"
+      },
+      "metriques_instant": {
+        "taux_saturation": "Taux au moment de l'événement",
+        "patients_attente": "Nombre patients en attente",
+        "temps_attente_moyen": "Temps attente moyen actuel"
+      }
+    },
+    "types_evenements": [
+      "PATIENT_ACCUEILLI",
+      "PATIENT_EN_ATTENTE",
+      "CONSULTATION_DEMARREE",
+      "CONSULTATION_TERMINEE",
+      "PATIENT_TRANSFERE",
+      "VIOLATION_CONTRAINTE_SURVEILLANCE",
+      "VIOLATION_CONTRAINTE_ABSENCE",
+      "EXCEPTION_360MIN_ACTIVEE",
+      "UNITE_SATUREE",
+      "SALLE_PLEINE"
+    ]
+  }
+}

@@ -1,0 +1,1486 @@
+[
+  {
+    "timestamp": "2026-01-17T09:25:55.472750",
+    "timestamp_unix": 1768638355.47275,
+    "event_type": "TEST",
+    "data": {
+      "message": "Test événement"
+    },
+    "metriques_instant": {
+      "taux_saturation": 50
+    }
+  },
+  {
+    "timestamp": "2026-01-17T09:33:44.793916",
+    "timestamp_unix": 1768638824.793916,
+    "event_type": "TEST",
+    "data": {
+      "message": "Test événement"
+    },
+    "metriques_instant": {
+      "taux_saturation": 50
+    }
+  },
+  {
+    "timestamp": "2026-01-17T09:50:44.336704",
+    "timestamp_unix": 1768639844.336704,
+    "event_type": "PATIENT_ACCUEILLI",
+    "data": {
+      "patient_id": "P001",
+      "nom": "Marie Dupont",
+      "gravite": "ROUGE",
+      "salle": 1
+    },
+    "metriques_instant": {
+      "taux_saturation": 5.0,
+      "patients_attente": 1,
+      "patients_consultation": 0,
+      "patients_transferes": 0,
+      "temps_attente_moyen": 0.0,
+      "temps_attente_max": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-17T09:50:44.338745",
+    "timestamp_unix": 1768639844.338745,
+    "event_type": "PATIENT_ACCUEILLI",
+    "data": {
+      "patient_id": "P002",
+      "nom": "Jean Martin",
+      "gravite": "VERT",
+      "salle": 1
+    },
+    "metriques_instant": {
+      "taux_saturation": 10.0,
+      "patients_attente": 2,
+      "patients_consultation": 0,
+      "patients_transferes": 0,
+      "temps_attente_moyen": 210.0,
+      "temps_attente_max": 420.0
+    }
+  },
+  {
+    "timestamp": "2026-01-17T09:50:44.340790",
+    "timestamp_unix": 1768639844.34079,
+    "event_type": "CONSULTATION_DEMARREE",
+    "data": {
+      "patient_id": "P001",
+      "gravite": "ROUGE",
+      "duree_prevue_min": 5
+    },
+    "metriques_instant": {
+      "taux_saturation": 10.0,
+      "patients_attente": 1,
+      "patients_consultation": 1,
+      "patients_transferes": 0,
+      "temps_attente_moyen": 420.0,
+      "temps_attente_max": 420.0
+    }
+  },
+  {
+    "timestamp": "2026-01-17T09:52:41.268357",
+    "timestamp_unix": 1768639961.268357,
+    "event_type": "PATIENT_ACCUEILLI",
+    "data": {
+      "patient_id": "PMASSE001",
+      "nom": "Lucie Dupont",
+      "gravite": "ROUGE",
+      "salle": 1
+    },
+    "metriques_instant": {
+      "taux_saturation": 5.0,
+      "patients_attente": 1,
+      "patients_consultation": 0,
+      "patients_transferes": 0,
+      "temps_attente_moyen": 0.0,
+      "temps_attente_max": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-17T09:52:41.269742",
+    "timestamp_unix": 1768639961.269742,
+    "event_type": "PATIENT_ACCUEILLI",
+    "data": {
+      "patient_id": "PMASSE002",
+      "nom": "Sophie Bernard",
+      "gravite": "GRIS",
+      "salle": 1
+    },
+    "metriques_instant": {
+      "taux_saturation": 10.0,
+      "patients_attente": 2,
+      "patients_consultation": 0,
+      "patients_transferes": 0,
+      "temps_attente_moyen": 0.0,
+      "temps_attente_max": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-17T09:52:41.271575",
+    "timestamp_unix": 1768639961.271575,
+    "event_type": "PATIENT_ACCUEILLI",
+    "data": {
+      "patient_id": "PMASSE003",
+      "nom": "Lucas Michel",
+      "gravite": "ROUGE",
+      "salle": 1
+    },
+    "metriques_instant": {
+      "taux_saturation": 15.0,
+      "patients_attente": 3,
+      "patients_consultation": 0,
+      "patients_transferes": 0,
+      "temps_attente_moyen": 0.0,
+      "temps_attente_max": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-17T09:52:41.272752",
+    "timestamp_unix": 1768639961.272752,
+    "event_type": "PATIENT_ACCUEILLI",
+    "data": {
+      "patient_id": "PMASSE004",
+      "nom": "Sophie Simon",
+      "gravite": "JAUNE",
+      "salle": 1
+    },
+    "metriques_instant": {
+      "taux_saturation": 20.0,
+      "patients_attente": 4,
+      "patients_consultation": 0,
+      "patients_transferes": 0,
+      "temps_attente_moyen": 0.0,
+      "temps_attente_max": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-17T09:52:41.273863",
+    "timestamp_unix": 1768639961.273863,
+    "event_type": "PATIENT_ACCUEILLI",
+    "data": {
+      "patient_id": "PMASSE005",
+      "nom": "Lucas Martin",
+      "gravite": "ROUGE",
+      "salle": 1
+    },
+    "metriques_instant": {
+      "taux_saturation": 25.0,
+      "patients_attente": 5,
+      "patients_consultation": 0,
+      "patients_transferes": 0,
+      "temps_attente_moyen": 0.0,
+      "temps_attente_max": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-17T09:52:41.276047",
+    "timestamp_unix": 1768639961.276047,
+    "event_type": "PATIENT_ACCUEILLI",
+    "data": {
+      "patient_id": "VERT_7H",
+      "nom": "Patient Longue Attente",
+      "gravite": "VERT",
+      "salle": 2
+    },
+    "metriques_instant": {
+      "taux_saturation": 30.0,
+      "patients_attente": 6,
+      "patients_consultation": 0,
+      "patients_transferes": 0,
+      "temps_attente_moyen": 70.0,
+      "temps_attente_max": 420.0
+    }
+  },
+  {
+    "timestamp": "2026-01-17T09:52:41.277421",
+    "timestamp_unix": 1768639961.277421,
+    "event_type": "PATIENT_ACCUEILLI",
+    "data": {
+      "patient_id": "JAUNE_RECENT",
+      "nom": "Patient Récent",
+      "gravite": "JAUNE",
+      "salle": 2
+    },
+    "metriques_instant": {
+      "taux_saturation": 35.0,
+      "patients_attente": 7,
+      "patients_consultation": 0,
+      "patients_transferes": 0,
+      "temps_attente_moyen": 60.0,
+      "temps_attente_max": 420.0
+    }
+  },
+  {
+    "timestamp": "2026-01-17T09:59:56.162905",
+    "timestamp_unix": 1768640396.162905,
+    "event_type": "PATIENT_ACCUEILLI",
+    "data": {
+      "patient_id": "P095956",
+      "nom": "Jean Dupont",
+      "gravite": "ROUGE",
+      "salle": 1
+    },
+    "metriques_instant": {
+      "taux_saturation": 5.0,
+      "patients_attente": 1,
+      "patients_consultation": 0,
+      "patients_transferes": 0,
+      "temps_attente_moyen": 0.0,
+      "temps_attente_max": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-17T10:00:09.515836",
+    "timestamp_unix": 1768640409.515836,
+    "event_type": "PATIENT_ACCUEILLI",
+    "data": {
+      "patient_id": "P100009",
+      "nom": "Marie Anne",
+      "gravite": "ROUGE",
+      "salle": 1
+    },
+    "metriques_instant": {
+      "taux_saturation": 10.0,
+      "patients_attente": 2,
+      "patients_consultation": 0,
+      "patients_transferes": 0,
+      "temps_attente_moyen": 0.11,
+      "temps_attente_max": 0.22
+    }
+  },
+  {
+    "timestamp": "2026-01-17T10:00:23.990446",
+    "timestamp_unix": 1768640423.990446,
+    "event_type": "PATIENT_ACCUEILLI",
+    "data": {
+      "patient_id": "AFFLUX01",
+      "nom": "Victime 1",
+      "gravite": "ROUGE",
+      "salle": 1
+    },
+    "metriques_instant": {
+      "taux_saturation": 15.0,
+      "patients_attente": 3,
+      "patients_consultation": 0,
+      "patients_transferes": 0,
+      "temps_attente_moyen": 0.24,
+      "temps_attente_max": 0.46
+    }
+  },
+  {
+    "timestamp": "2026-01-17T10:00:23.993521",
+    "timestamp_unix": 1768640423.993521,
+    "event_type": "PATIENT_ACCUEILLI",
+    "data": {
+      "patient_id": "AFFLUX02",
+      "nom": "Victime 2",
+      "gravite": "ROUGE",
+      "salle": 1
+    },
+    "metriques_instant": {
+      "taux_saturation": 20.0,
+      "patients_attente": 4,
+      "patients_consultation": 0,
+      "patients_transferes": 0,
+      "temps_attente_moyen": 0.18,
+      "temps_attente_max": 0.46
+    }
+  },
+  {
+    "timestamp": "2026-01-17T10:00:23.996584",
+    "timestamp_unix": 1768640423.996584,
+    "event_type": "PATIENT_ACCUEILLI",
+    "data": {
+      "patient_id": "AFFLUX03",
+      "nom": "Victime 3",
+      "gravite": "ROUGE",
+      "salle": 1
+    },
+    "metriques_instant": {
+      "taux_saturation": 25.0,
+      "patients_attente": 5,
+      "patients_consultation": 0,
+      "patients_transferes": 0,
+      "temps_attente_moyen": 0.14,
+      "temps_attente_max": 0.46
+    }
+  },
+  {
+    "timestamp": "2026-01-17T10:00:23.999165",
+    "timestamp_unix": 1768640423.999165,
+    "event_type": "PATIENT_ACCUEILLI",
+    "data": {
+      "patient_id": "AFFLUX04",
+      "nom": "Victime 4",
+      "gravite": "JAUNE",
+      "salle": 2
+    },
+    "metriques_instant": {
+      "taux_saturation": 30.0,
+      "patients_attente": 6,
+      "patients_consultation": 0,
+      "patients_transferes": 0,
+      "temps_attente_moyen": 0.12,
+      "temps_attente_max": 0.46
+    }
+  },
+  {
+    "timestamp": "2026-01-17T10:00:24.001992",
+    "timestamp_unix": 1768640424.001992,
+    "event_type": "PATIENT_ACCUEILLI",
+    "data": {
+      "patient_id": "AFFLUX05",
+      "nom": "Victime 5",
+      "gravite": "JAUNE",
+      "salle": 2
+    },
+    "metriques_instant": {
+      "taux_saturation": 35.0,
+      "patients_attente": 7,
+      "patients_consultation": 0,
+      "patients_transferes": 0,
+      "temps_attente_moyen": 0.1,
+      "temps_attente_max": 0.46
+    }
+  },
+  {
+    "timestamp": "2026-01-17T10:00:24.005478",
+    "timestamp_unix": 1768640424.005478,
+    "event_type": "PATIENT_ACCUEILLI",
+    "data": {
+      "patient_id": "AFFLUX06",
+      "nom": "Victime 6",
+      "gravite": "JAUNE",
+      "salle": 2
+    },
+    "metriques_instant": {
+      "taux_saturation": 40.0,
+      "patients_attente": 8,
+      "patients_consultation": 0,
+      "patients_transferes": 0,
+      "temps_attente_moyen": 0.09,
+      "temps_attente_max": 0.46
+    }
+  },
+  {
+    "timestamp": "2026-01-17T10:00:24.008670",
+    "timestamp_unix": 1768640424.00867,
+    "event_type": "PATIENT_ACCUEILLI",
+    "data": {
+      "patient_id": "AFFLUX07",
+      "nom": "Victime 7",
+      "gravite": "JAUNE",
+      "salle": 2
+    },
+    "metriques_instant": {
+      "taux_saturation": 45.0,
+      "patients_attente": 9,
+      "patients_consultation": 0,
+      "patients_transferes": 0,
+      "temps_attente_moyen": 0.08,
+      "temps_attente_max": 0.46
+    }
+  },
+  {
+    "timestamp": "2026-01-17T10:00:24.011572",
+    "timestamp_unix": 1768640424.011572,
+    "event_type": "PATIENT_ACCUEILLI",
+    "data": {
+      "patient_id": "AFFLUX08",
+      "nom": "Victime 8",
+      "gravite": "JAUNE",
+      "salle": 2
+    },
+    "metriques_instant": {
+      "taux_saturation": 50.0,
+      "patients_attente": 10,
+      "patients_consultation": 0,
+      "patients_transferes": 0,
+      "temps_attente_moyen": 0.07,
+      "temps_attente_max": 0.46
+    }
+  },
+  {
+    "timestamp": "2026-01-17T10:00:24.015152",
+    "timestamp_unix": 1768640424.015152,
+    "event_type": "PATIENT_ACCUEILLI",
+    "data": {
+      "patient_id": "AFFLUX09",
+      "nom": "Victime 9",
+      "gravite": "VERT",
+      "salle": 2
+    },
+    "metriques_instant": {
+      "taux_saturation": 55.0,
+      "patients_attente": 11,
+      "patients_consultation": 0,
+      "patients_transferes": 0,
+      "temps_attente_moyen": 0.06,
+      "temps_attente_max": 0.46
+    }
+  },
+  {
+    "timestamp": "2026-01-17T10:00:24.018678",
+    "timestamp_unix": 1768640424.018678,
+    "event_type": "PATIENT_ACCUEILLI",
+    "data": {
+      "patient_id": "AFFLUX10",
+      "nom": "Victime 10",
+      "gravite": "VERT",
+      "salle": 2
+    },
+    "metriques_instant": {
+      "taux_saturation": 60.0,
+      "patients_attente": 12,
+      "patients_consultation": 0,
+      "patients_transferes": 0,
+      "temps_attente_moyen": 0.06,
+      "temps_attente_max": 0.46
+    }
+  },
+  {
+    "timestamp": "2026-01-17T10:00:33.005093",
+    "timestamp_unix": 1768640433.005093,
+    "event_type": "CONSULTATION_DEMARREE",
+    "data": {
+      "patient_id": "P095956",
+      "gravite": "ROUGE",
+      "duree_prevue_min": 5
+    },
+    "metriques_instant": {
+      "taux_saturation": 60.0,
+      "patients_attente": 11,
+      "patients_consultation": 1,
+      "patients_transferes": 0,
+      "temps_attente_moyen": 0.17,
+      "temps_attente_max": 0.39
+    }
+  },
+  {
+    "timestamp": "2026-01-17T10:10:38.488663",
+    "timestamp_unix": 1768641038.488663,
+    "event_type": "PATIENT_ACCUEILLI",
+    "data": {
+      "patient_id": "AFFLUX01",
+      "nom": "Victime 1",
+      "gravite": "ROUGE",
+      "salle": 1
+    },
+    "metriques_instant": {
+      "taux_saturation": 5.0,
+      "patients_attente": 1,
+      "patients_consultation": 0,
+      "patients_transferes": 0,
+      "temps_attente_moyen": 0.0,
+      "temps_attente_max": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-17T10:10:38.492559",
+    "timestamp_unix": 1768641038.492559,
+    "event_type": "PATIENT_ACCUEILLI",
+    "data": {
+      "patient_id": "AFFLUX02",
+      "nom": "Victime 2",
+      "gravite": "ROUGE",
+      "salle": 1
+    },
+    "metriques_instant": {
+      "taux_saturation": 10.0,
+      "patients_attente": 2,
+      "patients_consultation": 0,
+      "patients_transferes": 0,
+      "temps_attente_moyen": 0.0,
+      "temps_attente_max": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-17T10:10:38.496690",
+    "timestamp_unix": 1768641038.49669,
+    "event_type": "PATIENT_ACCUEILLI",
+    "data": {
+      "patient_id": "AFFLUX03",
+      "nom": "Victime 3",
+      "gravite": "ROUGE",
+      "salle": 1
+    },
+    "metriques_instant": {
+      "taux_saturation": 15.0,
+      "patients_attente": 3,
+      "patients_consultation": 0,
+      "patients_transferes": 0,
+      "temps_attente_moyen": 0.0,
+      "temps_attente_max": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-17T10:10:38.500020",
+    "timestamp_unix": 1768641038.50002,
+    "event_type": "PATIENT_ACCUEILLI",
+    "data": {
+      "patient_id": "AFFLUX04",
+      "nom": "Victime 4",
+      "gravite": "JAUNE",
+      "salle": 1
+    },
+    "metriques_instant": {
+      "taux_saturation": 20.0,
+      "patients_attente": 4,
+      "patients_consultation": 0,
+      "patients_transferes": 0,
+      "temps_attente_moyen": 0.0,
+      "temps_attente_max": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-17T10:10:38.502866",
+    "timestamp_unix": 1768641038.502866,
+    "event_type": "PATIENT_ACCUEILLI",
+    "data": {
+      "patient_id": "AFFLUX05",
+      "nom": "Victime 5",
+      "gravite": "JAUNE",
+      "salle": 1
+    },
+    "metriques_instant": {
+      "taux_saturation": 25.0,
+      "patients_attente": 5,
+      "patients_consultation": 0,
+      "patients_transferes": 0,
+      "temps_attente_moyen": 0.0,
+      "temps_attente_max": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-17T10:10:38.505443",
+    "timestamp_unix": 1768641038.505443,
+    "event_type": "PATIENT_ACCUEILLI",
+    "data": {
+      "patient_id": "AFFLUX06",
+      "nom": "Victime 6",
+      "gravite": "JAUNE",
+      "salle": 2
+    },
+    "metriques_instant": {
+      "taux_saturation": 30.0,
+      "patients_attente": 6,
+      "patients_consultation": 0,
+      "patients_transferes": 0,
+      "temps_attente_moyen": 0.0,
+      "temps_attente_max": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-17T10:10:38.509046",
+    "timestamp_unix": 1768641038.509046,
+    "event_type": "PATIENT_ACCUEILLI",
+    "data": {
+      "patient_id": "AFFLUX07",
+      "nom": "Victime 7",
+      "gravite": "JAUNE",
+      "salle": 2
+    },
+    "metriques_instant": {
+      "taux_saturation": 35.0,
+      "patients_attente": 7,
+      "patients_consultation": 0,
+      "patients_transferes": 0,
+      "temps_attente_moyen": 0.0,
+      "temps_attente_max": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-17T10:10:38.512683",
+    "timestamp_unix": 1768641038.512683,
+    "event_type": "PATIENT_ACCUEILLI",
+    "data": {
+      "patient_id": "AFFLUX08",
+      "nom": "Victime 8",
+      "gravite": "JAUNE",
+      "salle": 2
+    },
+    "metriques_instant": {
+      "taux_saturation": 40.0,
+      "patients_attente": 8,
+      "patients_consultation": 0,
+      "patients_transferes": 0,
+      "temps_attente_moyen": 0.0,
+      "temps_attente_max": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-17T10:10:38.518428",
+    "timestamp_unix": 1768641038.518428,
+    "event_type": "PATIENT_ACCUEILLI",
+    "data": {
+      "patient_id": "AFFLUX09",
+      "nom": "Victime 9",
+      "gravite": "VERT",
+      "salle": 2
+    },
+    "metriques_instant": {
+      "taux_saturation": 45.0,
+      "patients_attente": 9,
+      "patients_consultation": 0,
+      "patients_transferes": 0,
+      "temps_attente_moyen": 0.0,
+      "temps_attente_max": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-17T10:10:38.523181",
+    "timestamp_unix": 1768641038.523181,
+    "event_type": "PATIENT_ACCUEILLI",
+    "data": {
+      "patient_id": "AFFLUX10",
+      "nom": "Victime 10",
+      "gravite": "VERT",
+      "salle": 2
+    },
+    "metriques_instant": {
+      "taux_saturation": 50.0,
+      "patients_attente": 10,
+      "patients_consultation": 0,
+      "patients_transferes": 0,
+      "temps_attente_moyen": 0.0,
+      "temps_attente_max": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-17T10:10:43.129909",
+    "timestamp_unix": 1768641043.129909,
+    "event_type": "CONSULTATION_DEMARREE",
+    "data": {
+      "patient_id": "AFFLUX01",
+      "gravite": "ROUGE",
+      "duree_prevue_min": 5
+    },
+    "metriques_instant": {
+      "taux_saturation": 50.0,
+      "patients_attente": 9,
+      "patients_consultation": 1,
+      "patients_transferes": 0,
+      "temps_attente_moyen": 0.08,
+      "temps_attente_max": 0.08
+    }
+  },
+  {
+    "timestamp": "2026-01-17T10:13:02.423303",
+    "timestamp_unix": 1768641182.423303,
+    "event_type": "PATIENT_ACCUEILLI",
+    "data": {
+      "patient_id": "P4649",
+      "nom": "Thomas Martin",
+      "gravite": "VERT",
+      "salle": 2
+    },
+    "metriques_instant": {
+      "taux_saturation": 55.0,
+      "patients_attente": 10,
+      "patients_consultation": 1,
+      "patients_transferes": 0,
+      "temps_attente_moyen": 2.16,
+      "temps_attente_max": 2.4
+    }
+  },
+  {
+    "timestamp": "2026-01-17T10:13:04.061101",
+    "timestamp_unix": 1768641184.061101,
+    "event_type": "PATIENT_ACCUEILLI",
+    "data": {
+      "patient_id": "P9023",
+      "nom": "Marie Michel",
+      "gravite": "VERT",
+      "salle": 2
+    },
+    "metriques_instant": {
+      "taux_saturation": 60.0,
+      "patients_attente": 11,
+      "patients_consultation": 1,
+      "patients_transferes": 0,
+      "temps_attente_moyen": 1.99,
+      "temps_attente_max": 2.43
+    }
+  },
+  {
+    "timestamp": "2026-01-17T10:24:44.480999",
+    "timestamp_unix": 1768641884.480999,
+    "event_type": "PATIENT_ACCUEILLI",
+    "data": {
+      "patient_id": "PMASSE001",
+      "nom": "Lucie Dupont",
+      "gravite": "JAUNE",
+      "salle": 1
+    },
+    "metriques_instant": {
+      "taux_saturation": 5.0,
+      "patients_attente": 1,
+      "patients_consultation": 0,
+      "patients_transferes": 0,
+      "temps_attente_moyen": 0.0,
+      "temps_attente_max": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-17T10:24:44.485229",
+    "timestamp_unix": 1768641884.485229,
+    "event_type": "PATIENT_ACCUEILLI",
+    "data": {
+      "patient_id": "PMASSE002",
+      "nom": "Sophie Moreau",
+      "gravite": "VERT",
+      "salle": 1
+    },
+    "metriques_instant": {
+      "taux_saturation": 10.0,
+      "patients_attente": 2,
+      "patients_consultation": 0,
+      "patients_transferes": 0,
+      "temps_attente_moyen": 0.0,
+      "temps_attente_max": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-17T10:24:44.489072",
+    "timestamp_unix": 1768641884.489072,
+    "event_type": "PATIENT_ACCUEILLI",
+    "data": {
+      "patient_id": "PMASSE003",
+      "nom": "Sophie Dubois",
+      "gravite": "VERT",
+      "salle": 1
+    },
+    "metriques_instant": {
+      "taux_saturation": 15.0,
+      "patients_attente": 3,
+      "patients_consultation": 0,
+      "patients_transferes": 0,
+      "temps_attente_moyen": 0.0,
+      "temps_attente_max": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-17T10:24:44.492358",
+    "timestamp_unix": 1768641884.492358,
+    "event_type": "PATIENT_ACCUEILLI",
+    "data": {
+      "patient_id": "PMASSE004",
+      "nom": "Emma Moreau",
+      "gravite": "VERT",
+      "salle": 1
+    },
+    "metriques_instant": {
+      "taux_saturation": 20.0,
+      "patients_attente": 4,
+      "patients_consultation": 0,
+      "patients_transferes": 0,
+      "temps_attente_moyen": 0.0,
+      "temps_attente_max": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-17T10:24:44.495468",
+    "timestamp_unix": 1768641884.495468,
+    "event_type": "PATIENT_ACCUEILLI",
+    "data": {
+      "patient_id": "PMASSE005",
+      "nom": "Lucas Bernard",
+      "gravite": "GRIS",
+      "salle": 1
+    },
+    "metriques_instant": {
+      "taux_saturation": 25.0,
+      "patients_attente": 5,
+      "patients_consultation": 0,
+      "patients_transferes": 0,
+      "temps_attente_moyen": 0.0,
+      "temps_attente_max": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-17T10:30:10.242203",
+    "timestamp_unix": 1768642210.242203,
+    "event_type": "PATIENT_ACCUEILLI",
+    "data": {
+      "patient_id": "PMASSE001",
+      "nom": "Jean Dubois",
+      "gravite": "JAUNE",
+      "salle": 1
+    },
+    "metriques_instant": {
+      "taux_saturation": 5.0,
+      "patients_attente": 1,
+      "patients_consultation": 0,
+      "patients_transferes": 0,
+      "temps_attente_moyen": 0.0,
+      "temps_attente_max": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-17T10:30:10.247030",
+    "timestamp_unix": 1768642210.24703,
+    "event_type": "PATIENT_ACCUEILLI",
+    "data": {
+      "patient_id": "PMASSE002",
+      "nom": "Pierre Martin",
+      "gravite": "VERT",
+      "salle": 1
+    },
+    "metriques_instant": {
+      "taux_saturation": 10.0,
+      "patients_attente": 2,
+      "patients_consultation": 0,
+      "patients_transferes": 0,
+      "temps_attente_moyen": 0.0,
+      "temps_attente_max": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-17T10:30:10.250176",
+    "timestamp_unix": 1768642210.250176,
+    "event_type": "PATIENT_ACCUEILLI",
+    "data": {
+      "patient_id": "PMASSE003",
+      "nom": "Marie Dupont",
+      "gravite": "VERT",
+      "salle": 1
+    },
+    "metriques_instant": {
+      "taux_saturation": 15.0,
+      "patients_attente": 3,
+      "patients_consultation": 0,
+      "patients_transferes": 0,
+      "temps_attente_moyen": 0.0,
+      "temps_attente_max": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-17T10:30:10.253797",
+    "timestamp_unix": 1768642210.253797,
+    "event_type": "PATIENT_ACCUEILLI",
+    "data": {
+      "patient_id": "PMASSE004",
+      "nom": "Lucas Martin",
+      "gravite": "GRIS",
+      "salle": 1
+    },
+    "metriques_instant": {
+      "taux_saturation": 20.0,
+      "patients_attente": 4,
+      "patients_consultation": 0,
+      "patients_transferes": 0,
+      "temps_attente_moyen": 0.0,
+      "temps_attente_max": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-17T10:30:10.258708",
+    "timestamp_unix": 1768642210.258708,
+    "event_type": "PATIENT_ACCUEILLI",
+    "data": {
+      "patient_id": "PMASSE005",
+      "nom": "Marie Michel",
+      "gravite": "JAUNE",
+      "salle": 1
+    },
+    "metriques_instant": {
+      "taux_saturation": 25.0,
+      "patients_attente": 5,
+      "patients_consultation": 0,
+      "patients_transferes": 0,
+      "temps_attente_moyen": 0.0,
+      "temps_attente_max": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-17T10:30:20.629669",
+    "timestamp_unix": 1768642220.629669,
+    "event_type": "PATIENT_ACCUEILLI",
+    "data": {
+      "patient_id": "PMASSE001",
+      "nom": "Jean Michel",
+      "gravite": "VERT",
+      "salle": 2
+    },
+    "metriques_instant": {
+      "taux_saturation": 30.0,
+      "patients_attente": 6,
+      "patients_consultation": 0,
+      "patients_transferes": 0,
+      "temps_attente_moyen": 0.14,
+      "temps_attente_max": 0.17
+    }
+  },
+  {
+    "timestamp": "2026-01-17T10:30:20.633137",
+    "timestamp_unix": 1768642220.633137,
+    "event_type": "PATIENT_ACCUEILLI",
+    "data": {
+      "patient_id": "PMASSE002",
+      "nom": "Marie Michel",
+      "gravite": "GRIS",
+      "salle": 2
+    },
+    "metriques_instant": {
+      "taux_saturation": 35.0,
+      "patients_attente": 7,
+      "patients_consultation": 0,
+      "patients_transferes": 0,
+      "temps_attente_moyen": 0.12,
+      "temps_attente_max": 0.17
+    }
+  },
+  {
+    "timestamp": "2026-01-17T10:30:20.637967",
+    "timestamp_unix": 1768642220.637967,
+    "event_type": "PATIENT_ACCUEILLI",
+    "data": {
+      "patient_id": "PMASSE003",
+      "nom": "Lucas Laurent",
+      "gravite": "VERT",
+      "salle": 2
+    },
+    "metriques_instant": {
+      "taux_saturation": 40.0,
+      "patients_attente": 8,
+      "patients_consultation": 0,
+      "patients_transferes": 0,
+      "temps_attente_moyen": 0.11,
+      "temps_attente_max": 0.17
+    }
+  },
+  {
+    "timestamp": "2026-01-17T10:30:20.642079",
+    "timestamp_unix": 1768642220.642079,
+    "event_type": "PATIENT_ACCUEILLI",
+    "data": {
+      "patient_id": "PMASSE004",
+      "nom": "Pierre Moreau",
+      "gravite": "VERT",
+      "salle": 2
+    },
+    "metriques_instant": {
+      "taux_saturation": 45.0,
+      "patients_attente": 9,
+      "patients_consultation": 0,
+      "patients_transferes": 0,
+      "temps_attente_moyen": 0.1,
+      "temps_attente_max": 0.17
+    }
+  },
+  {
+    "timestamp": "2026-01-17T10:30:20.650798",
+    "timestamp_unix": 1768642220.650798,
+    "event_type": "PATIENT_ACCUEILLI",
+    "data": {
+      "patient_id": "PMASSE005",
+      "nom": "Lucie Simon",
+      "gravite": "GRIS",
+      "salle": 2
+    },
+    "metriques_instant": {
+      "taux_saturation": 50.0,
+      "patients_attente": 10,
+      "patients_consultation": 0,
+      "patients_transferes": 0,
+      "temps_attente_moyen": 0.09,
+      "temps_attente_max": 0.17
+    }
+  },
+  {
+    "timestamp": "2026-01-17T10:30:31.097092",
+    "timestamp_unix": 1768642231.097092,
+    "event_type": "PATIENT_TRANSFERE",
+    "data": {
+      "patient_id": "PMASSE001",
+      "unite": "ORTHOPÉDIE",
+      "gravite": "JAUNE"
+    },
+    "metriques_instant": {
+      "taux_saturation": 45.0,
+      "patients_attente": 9,
+      "patients_consultation": 0,
+      "patients_transferes": 1,
+      "temps_attente_moyen": 0.25,
+      "temps_attente_max": 0.35
+    }
+  },
+  {
+    "timestamp": "2026-01-17T10:30:36.584321",
+    "timestamp_unix": 1768642236.584321,
+    "event_type": "PATIENT_TRANSFERE",
+    "data": {
+      "patient_id": "PMASSE005",
+      "unite": "ORTHOPÉDIE",
+      "gravite": "JAUNE"
+    },
+    "metriques_instant": {
+      "taux_saturation": 40.0,
+      "patients_attente": 8,
+      "patients_consultation": 0,
+      "patients_transferes": 2,
+      "temps_attente_moyen": 0.33,
+      "temps_attente_max": 0.44
+    }
+  },
+  {
+    "timestamp": "2026-01-17T10:30:42.126064",
+    "timestamp_unix": 1768642242.126064,
+    "event_type": "PATIENT_TRANSFERE",
+    "data": {
+      "patient_id": "PMASSE002",
+      "unite": "ORTHOPÉDIE",
+      "gravite": "VERT"
+    },
+    "metriques_instant": {
+      "taux_saturation": 35.0,
+      "patients_attente": 7,
+      "patients_consultation": 0,
+      "patients_transferes": 3,
+      "temps_attente_moyen": 0.41,
+      "temps_attente_max": 0.53
+    }
+  },
+  {
+    "timestamp": "2026-01-17T10:30:47.609234",
+    "timestamp_unix": 1768642247.609234,
+    "event_type": "PATIENT_TRANSFERE",
+    "data": {
+      "patient_id": "PMASSE003",
+      "unite": "ORTHOPÉDIE",
+      "gravite": "VERT"
+    },
+    "metriques_instant": {
+      "taux_saturation": 30.0,
+      "patients_attente": 6,
+      "patients_consultation": 0,
+      "patients_transferes": 4,
+      "temps_attente_moyen": 0.48,
+      "temps_attente_max": 0.62
+    }
+  },
+  {
+    "timestamp": "2026-01-17T10:30:53.080780",
+    "timestamp_unix": 1768642253.08078,
+    "event_type": "PATIENT_TRANSFERE",
+    "data": {
+      "patient_id": "PMASSE001",
+      "unite": "ORTHOPÉDIE",
+      "gravite": "VERT"
+    },
+    "metriques_instant": {
+      "taux_saturation": 25.0,
+      "patients_attente": 5,
+      "patients_consultation": 0,
+      "patients_transferes": 5,
+      "temps_attente_moyen": 0.58,
+      "temps_attente_max": 0.71
+    }
+  },
+  {
+    "timestamp": "2026-01-17T10:30:58.667669",
+    "timestamp_unix": 1768642258.667669,
+    "event_type": "PATIENT_TRANSFERE",
+    "data": {
+      "patient_id": "PMASSE003",
+      "unite": "ORTHOPÉDIE",
+      "gravite": "VERT"
+    },
+    "metriques_instant": {
+      "taux_saturation": 20.0,
+      "patients_attente": 4,
+      "patients_consultation": 0,
+      "patients_transferes": 6,
+      "temps_attente_moyen": 0.68,
+      "temps_attente_max": 0.81
+    }
+  },
+  {
+    "timestamp": "2026-01-17T10:31:05.490868",
+    "timestamp_unix": 1768642265.490868,
+    "event_type": "PATIENT_TRANSFERE",
+    "data": {
+      "patient_id": "PMASSE004",
+      "unite": "ORTHOPÉDIE",
+      "gravite": "VERT"
+    },
+    "metriques_instant": {
+      "taux_saturation": 15.0,
+      "patients_attente": 3,
+      "patients_consultation": 0,
+      "patients_transferes": 7,
+      "temps_attente_moyen": 0.81,
+      "temps_attente_max": 0.92
+    }
+  },
+  {
+    "timestamp": "2026-01-17T10:45:07.987804",
+    "timestamp_unix": 1768643107.987804,
+    "event_type": "PATIENT_ACCUEILLI",
+    "data": {
+      "patient_id": "AFFLUX01",
+      "nom": "Victime 1",
+      "gravite": "ROUGE",
+      "salle": 1
+    },
+    "metriques_instant": {
+      "taux_saturation": 5.0,
+      "patients_attente": 1,
+      "patients_consultation": 0,
+      "patients_transferes": 0,
+      "temps_attente_moyen": 0.0,
+      "temps_attente_max": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-17T10:45:07.994268",
+    "timestamp_unix": 1768643107.994268,
+    "event_type": "PATIENT_ACCUEILLI",
+    "data": {
+      "patient_id": "AFFLUX02",
+      "nom": "Victime 2",
+      "gravite": "ROUGE",
+      "salle": 1
+    },
+    "metriques_instant": {
+      "taux_saturation": 10.0,
+      "patients_attente": 2,
+      "patients_consultation": 0,
+      "patients_transferes": 0,
+      "temps_attente_moyen": 0.0,
+      "temps_attente_max": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-17T10:45:07.998621",
+    "timestamp_unix": 1768643107.998621,
+    "event_type": "PATIENT_ACCUEILLI",
+    "data": {
+      "patient_id": "AFFLUX03",
+      "nom": "Victime 3",
+      "gravite": "ROUGE",
+      "salle": 1
+    },
+    "metriques_instant": {
+      "taux_saturation": 15.0,
+      "patients_attente": 3,
+      "patients_consultation": 0,
+      "patients_transferes": 0,
+      "temps_attente_moyen": 0.0,
+      "temps_attente_max": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-17T10:45:08.003034",
+    "timestamp_unix": 1768643108.003034,
+    "event_type": "PATIENT_ACCUEILLI",
+    "data": {
+      "patient_id": "AFFLUX04",
+      "nom": "Victime 4",
+      "gravite": "JAUNE",
+      "salle": 1
+    },
+    "metriques_instant": {
+      "taux_saturation": 20.0,
+      "patients_attente": 4,
+      "patients_consultation": 0,
+      "patients_transferes": 0,
+      "temps_attente_moyen": 0.0,
+      "temps_attente_max": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-17T10:45:08.007221",
+    "timestamp_unix": 1768643108.007221,
+    "event_type": "PATIENT_ACCUEILLI",
+    "data": {
+      "patient_id": "AFFLUX05",
+      "nom": "Victime 5",
+      "gravite": "JAUNE",
+      "salle": 1
+    },
+    "metriques_instant": {
+      "taux_saturation": 25.0,
+      "patients_attente": 5,
+      "patients_consultation": 0,
+      "patients_transferes": 0,
+      "temps_attente_moyen": 0.0,
+      "temps_attente_max": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-17T10:45:08.011515",
+    "timestamp_unix": 1768643108.011515,
+    "event_type": "PATIENT_ACCUEILLI",
+    "data": {
+      "patient_id": "AFFLUX06",
+      "nom": "Victime 6",
+      "gravite": "JAUNE",
+      "salle": 2
+    },
+    "metriques_instant": {
+      "taux_saturation": 30.0,
+      "patients_attente": 6,
+      "patients_consultation": 0,
+      "patients_transferes": 0,
+      "temps_attente_moyen": 0.0,
+      "temps_attente_max": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-17T10:45:08.016172",
+    "timestamp_unix": 1768643108.016172,
+    "event_type": "PATIENT_ACCUEILLI",
+    "data": {
+      "patient_id": "AFFLUX07",
+      "nom": "Victime 7",
+      "gravite": "JAUNE",
+      "salle": 2
+    },
+    "metriques_instant": {
+      "taux_saturation": 35.0,
+      "patients_attente": 7,
+      "patients_consultation": 0,
+      "patients_transferes": 0,
+      "temps_attente_moyen": 0.0,
+      "temps_attente_max": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-17T10:45:08.021650",
+    "timestamp_unix": 1768643108.02165,
+    "event_type": "PATIENT_ACCUEILLI",
+    "data": {
+      "patient_id": "AFFLUX08",
+      "nom": "Victime 8",
+      "gravite": "JAUNE",
+      "salle": 2
+    },
+    "metriques_instant": {
+      "taux_saturation": 40.0,
+      "patients_attente": 8,
+      "patients_consultation": 0,
+      "patients_transferes": 0,
+      "temps_attente_moyen": 0.0,
+      "temps_attente_max": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-17T10:45:08.026776",
+    "timestamp_unix": 1768643108.026776,
+    "event_type": "PATIENT_ACCUEILLI",
+    "data": {
+      "patient_id": "AFFLUX09",
+      "nom": "Victime 9",
+      "gravite": "VERT",
+      "salle": 2
+    },
+    "metriques_instant": {
+      "taux_saturation": 45.0,
+      "patients_attente": 9,
+      "patients_consultation": 0,
+      "patients_transferes": 0,
+      "temps_attente_moyen": 0.0,
+      "temps_attente_max": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-17T10:45:08.031556",
+    "timestamp_unix": 1768643108.031556,
+    "event_type": "PATIENT_ACCUEILLI",
+    "data": {
+      "patient_id": "AFFLUX10",
+      "nom": "Victime 10",
+      "gravite": "VERT",
+      "salle": 2
+    },
+    "metriques_instant": {
+      "taux_saturation": 50.0,
+      "patients_attente": 10,
+      "patients_consultation": 0,
+      "patients_transferes": 0,
+      "temps_attente_moyen": 0.0,
+      "temps_attente_max": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-01-17T10:45:16.619525",
+    "timestamp_unix": 1768643116.619525,
+    "event_type": "PATIENT_TRANSFERE",
+    "data": {
+      "patient_id": "AFFLUX01",
+      "unite": "ORTHOPÉDIE",
+      "gravite": "ROUGE"
+    },
+    "metriques_instant": {
+      "taux_saturation": 45.0,
+      "patients_attente": 9,
+      "patients_consultation": 0,
+      "patients_transferes": 1,
+      "temps_attente_moyen": 0.14,
+      "temps_attente_max": 0.14
+    }
+  },
+  {
+    "timestamp": "2026-01-17T10:45:22.123272",
+    "timestamp_unix": 1768643122.123272,
+    "event_type": "PATIENT_TRANSFERE",
+    "data": {
+      "patient_id": "AFFLUX02",
+      "unite": "ORTHOPÉDIE",
+      "gravite": "ROUGE"
+    },
+    "metriques_instant": {
+      "taux_saturation": 40.0,
+      "patients_attente": 8,
+      "patients_consultation": 0,
+      "patients_transferes": 2,
+      "temps_attente_moyen": 0.24,
+      "temps_attente_max": 0.24
+    }
+  },
+  {
+    "timestamp": "2026-01-17T10:45:33.123819",
+    "timestamp_unix": 1768643133.123819,
+    "event_type": "PATIENT_TRANSFERE",
+    "data": {
+      "patient_id": "AFFLUX03",
+      "unite": "NEUROLOGIE",
+      "gravite": "ROUGE"
+    },
+    "metriques_instant": {
+      "taux_saturation": 35.0,
+      "patients_attente": 7,
+      "patients_consultation": 0,
+      "patients_transferes": 3,
+      "temps_attente_moyen": 0.42,
+      "temps_attente_max": 0.42
+    }
+  },
+  {
+    "timestamp": "2026-01-17T10:45:38.582576",
+    "timestamp_unix": 1768643138.582576,
+    "event_type": "PATIENT_TRANSFERE",
+    "data": {
+      "patient_id": "AFFLUX04",
+      "unite": "ORTHOPÉDIE",
+      "gravite": "JAUNE"
+    },
+    "metriques_instant": {
+      "taux_saturation": 30.0,
+      "patients_attente": 6,
+      "patients_consultation": 0,
+      "patients_transferes": 4,
+      "temps_attente_moyen": 0.51,
+      "temps_attente_max": 0.51
+    }
+  },
+  {
+    "timestamp": "2026-01-17T10:45:49.531701",
+    "timestamp_unix": 1768643149.531701,
+    "event_type": "PATIENT_TRANSFERE",
+    "data": {
+      "patient_id": "AFFLUX05",
+      "unite": "ORTHOPÉDIE",
+      "gravite": "JAUNE"
+    },
+    "metriques_instant": {
+      "taux_saturation": 25.0,
+      "patients_attente": 5,
+      "patients_consultation": 0,
+      "patients_transferes": 5,
+      "temps_attente_moyen": 0.69,
+      "temps_attente_max": 0.69
+    }
+  },
+  {
+    "timestamp": "2026-01-17T10:45:55.037765",
+    "timestamp_unix": 1768643155.037765,
+    "event_type": "PATIENT_TRANSFERE",
+    "data": {
+      "patient_id": "AFFLUX06",
+      "unite": "ORTHOPÉDIE",
+      "gravite": "JAUNE"
+    },
+    "metriques_instant": {
+      "taux_saturation": 20.0,
+      "patients_attente": 4,
+      "patients_consultation": 0,
+      "patients_transferes": 6,
+      "temps_attente_moyen": 0.78,
+      "temps_attente_max": 0.78
+    }
+  },
+  {
+    "timestamp": "2026-01-17T10:46:07.089855",
+    "timestamp_unix": 1768643167.089855,
+    "event_type": "PATIENT_TRANSFERE",
+    "data": {
+      "patient_id": "AFFLUX07",
+      "unite": "ORTHOPÉDIE",
+      "gravite": "JAUNE"
+    },
+    "metriques_instant": {
+      "taux_saturation": 15.0,
+      "patients_attente": 3,
+      "patients_consultation": 0,
+      "patients_transferes": 7,
+      "temps_attente_moyen": 0.98,
+      "temps_attente_max": 0.98
+    }
+  },
+  {
+    "timestamp": "2026-01-17T10:46:12.570531",
+    "timestamp_unix": 1768643172.570531,
+    "event_type": "PATIENT_TRANSFERE",
+    "data": {
+      "patient_id": "AFFLUX08",
+      "unite": "ORTHOPÉDIE",
+      "gravite": "JAUNE"
+    },
+    "metriques_instant": {
+      "taux_saturation": 10.0,
+      "patients_attente": 2,
+      "patients_consultation": 0,
+      "patients_transferes": 8,
+      "temps_attente_moyen": 1.08,
+      "temps_attente_max": 1.08
+    }
+  },
+  {
+    "timestamp": "2026-01-17T10:46:23.685077",
+    "timestamp_unix": 1768643183.685077,
+    "event_type": "PATIENT_TRANSFERE",
+    "data": {
+      "patient_id": "AFFLUX09",
+      "unite": "ORTHOPÉDIE",
+      "gravite": "VERT"
+    },
+    "metriques_instant": {
+      "taux_saturation": 5.0,
+      "patients_attente": 1,
+      "patients_consultation": 0,
+      "patients_transferes": 9,
+      "temps_attente_moyen": 1.26,
+      "temps_attente_max": 1.26
+    }
+  },
+  {
+    "timestamp": "2026-01-17T10:46:29.176898",
+    "timestamp_unix": 1768643189.176898,
+    "event_type": "PATIENT_TRANSFERE",
+    "data": {
+      "patient_id": "AFFLUX10",
+      "unite": "ORTHOPÉDIE",
+      "gravite": "VERT"
+    },
+    "metriques_instant": {
+      "taux_saturation": 0.0,
+      "patients_attente": 0,
+      "patients_consultation": 0,
+      "patients_transferes": 10,
+      "temps_attente_moyen": 0,
+      "temps_attente_max": 0
+    }
+  }
+]
